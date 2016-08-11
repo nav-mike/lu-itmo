@@ -11,5 +11,7 @@ Rails.application.routes.draw do
 
   get '/links' => 'pages#links'
   
+  get '/contacts' => 'pages#contacts'
+  
   root 'pages#index'
 end

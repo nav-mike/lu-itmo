@@ -25,4 +25,7 @@ class PagesController < ApplicationController
 
   def links
   end
+  
+  def contacts
+  end
 end
