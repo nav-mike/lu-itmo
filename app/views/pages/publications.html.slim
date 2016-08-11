@@ -1,2 +1,44 @@
-h1 Pages#publications
-p Find me in app/views/pages/publications.html.erb
+.page-header
+  h1 Публикации
+p
+| Эта страница содержит публикации, доклады, статьи, которые имеют отношение к связанным данным
+|  российских университетов и связанных с ними технологий.
+|  Пожалуйста, 
+a href ='/contacts' свяжитесь с нами
+|  , если вы знаете о дополнительных ресурсах, которые могут быть включены в этот список.
+
+p
+  .container
+    table.table.table-hover
+      - @publications.each do |publication|
+        tr
+          td= publication[:title]
+          td
+            i
+              small= publication[:ref]
+          td
+            a.btn.btn-info href='#{publication[:link]}' target='_blank' title='Подробнее'
+              = fa_icon 'external-link'
+              
+    nav.text-center aria-label=("Page navigation") 
+      ul.pagination
+        li
+          - spage = params[:page].blank? || params[:page].to_i == 1 ? 1 : params[:page].to_i - 1
+          a aria-label="Previous" href="/publications?page=#{spage}"
+            span aria-hidden="true"  &laquo;
+        li class=(params[:page].blank? || params[:page].to_i == 1 ? 'active' : nil)
+          a href="/publications?page=1"  1
+        li class=(params[:page].to_i == 2 ? 'active' : nil)
+          a href="/publications?page=2"  2
+        li class=(params[:page].to_i == 3 ? 'active' : nil)
+          a href="/publications?page=3"  3
+        li class=(params[:page].to_i == 4 ? 'active' : nil)
+          a href="/publications?page=4"  4
+        li class=(params[:page].to_i == 5 ? 'active' : nil)
+          a href="/publications?page=5"  5
+        li
+          - epage = params[:page].present? && params[:page].to_i == 5 ? 5 : params[:page].to_i + 1
+          - epage = 2 if params[:page].blank?
+          a aria-label="Next" href="/publications?page=#{epage}" 
+            span aria-hidden="true"  &raquo;
+
