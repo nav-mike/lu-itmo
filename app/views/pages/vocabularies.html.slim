@@ -1,2 +1,36 @@
-h1 Pages#vocabularies
-p Find me in app/views/pages/vocabularies.html.erb
+.page-header
+  h1 Словари
+  
+.container.main-content
+  p
+    | Эта страница содержит список словарей, которые используются для описания университетских данных
+    | , а также объяснения основных концепций и ссылки на ресурсы, показывающие, как описать определенные ситуации, данные и прочее, с помощью этих словарей.
+
+  hr
+
+  h4
+    a href='http://linkedscience.org/teach/ns/' target='_blank' TEACH - словарь описания базовых понятий образования
+  p
+    | TEACH - словарь описания основных терминов в области образования, позволяет описывать такие сущности как: преподаватель, учебный курс, учебный предмет и др. в виде связанных данных.
+    a href='http://data.uni-muenster.de/context/page/csa/course/171' tagret='_blank'  Пример
+    |  использования словаря для описания курсов в
+    a href='http://www.uni-muenster.de/' tagret='_blank'  Вестфальском университете имени Вильгельма
+    | .
+
+  h4
+    a href='http://bibliontology.com/' target='_blank' BIBO - онтология описания библиографии
+  p
+    | Онтология описывает библиографию в Semantic Web в формате RDF.
+    |  Эта онтология может быть использована для цитирования, классификации документов, или просто как способ описания любого документа в формате RDF.
+    |  Онтология разрботана на основе многих существующих форматов описания документов в виде метаданных,
+    |  а также онтология может быть использована в качестве общей основы для преобразования других библиографических источников данных.
+    a href='http://data.open.ac.uk/oro/26853' target='_blank'  Пример
+    |  использования онтологии в
+    a href='http://www.open.ac.uk/' target='_blank'  Открытом университете
+    | .
+
+  h4 VIVO Ontology
+  h4 FOAF Ontology
+
+  a.btn.btn-info href='http://linkeduniversities.org/lu/index.php/vocabularies/index.html' target='_blank'
+    = fa_icon 'chevron-circle-right ', text: 'Подробнее'
