@@ -38,3 +38,7 @@ dl.row {
 dl.row dd {
   padding-bottom: 10px;
 }
+
+#itmo {
+  background: url(#{asset_path 'itmo.png'});
+}
