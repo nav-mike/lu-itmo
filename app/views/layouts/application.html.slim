@@ -35,34 +35,22 @@ html
         /! /.nav-collapse
 
     /! Yandex.Metrika counter
+    script src="https://mc.yandex.ru/metrika/watch.js" type="text/javascript" 
     javascript:
-      | (function (d, w, c) {
-          | (w[c] = w[c] || []).push(function() {
-              | try {
-                  | w.yaCounter46166469 = new Ya.Metrika({
-                      | id:46166469,
-                      | clickmap:true,
-                      | trackLinks:true,
-                      | accurateTrackBounce:true
-                  | });
-              | } catch(e) { }
+      | try {
+          | var yaCounter46166469 = new Ya.Metrika({
+              | id:46166469,
+              | clickmap:true,
+              | trackLinks:true,
+              | accurateTrackBounce:true
           | });
-    
-          | var n = d.getElementsByTagName("script")[0],
-              | s = d.createElement("script"),
-              | f = function () { n.parentNode.insertBefore(s, n); };
-          | s.type = "text/javascript";
-          | s.async = true;
-          | s.src = "https://mc.yandex.ru/metrika/watch.js";
-    
-          | if (w.opera == "[object Opera]") {
-              | d.addEventListener("DOMContentLoaded", f, false);
-          | } else { f(); }
-      | })(document, window, "yandex_metrika_callbacks");
+      | } catch(e) { }
     noscript
       div
         img alt="" src="https://mc.yandex.ru/watch/46166469" style=("position:absolute; left:-9999px;") /
     /! /Yandex.Metrika counter
+    
+
     
 
 
